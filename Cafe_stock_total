@@ -1,0 +1,31 @@
+# Creating a cafe menu with 4 items
+# Creating dictionary called stock with stock prices
+# Creating dictionary called price with cost prices 
+
+menu = ["Burger", "Chips", "Fish", "Soup"]
+stock = {"Burger" : 3,
+         "Chips"  : 1,
+         "Fish"   : 4,
+         "Soup"   : 2}
+
+price = {"Burger" : 6,
+         "Chips"  : 3,
+         "Fish"   : 9,
+         "Soup"   : 3}
+
+# printing stock and price items
+
+print(stock.items())
+print(price.items())
+
+# Calculating items value by using the formula item_value = (stock[items] * price[items]) and dictionary comprehension
+
+items_value = {key: value * price[key] for key, value in stock.items()}
+print("The total items value " + str(items_value))
+
+# Calculating total cafe stock value
+total_stock = sum(items_value.values())
+print("The total stock worth in the cafe: £" + str(total_stock))
+
+
+
